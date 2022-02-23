@@ -1,10 +1,15 @@
+import { ThemeProvider } from "styled-components"
+import { lightTheme } from "./components/Themes"
 import GlobalStyle from "./globalStyles"
 
 function App() {
   return <>
 
   <GlobalStyle/>
-    App File
+  <ThemeProvider theme={lightTheme}>
+  App File
+  </ThemeProvider>
+    
     </>
     
 }
