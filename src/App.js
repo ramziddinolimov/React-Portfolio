@@ -3,6 +3,7 @@ import { ThemeProvider } from "styled-components"
 import { lightTheme } from "./components/Themes"
 import GlobalStyle from "./globalStyles"
 
+// Components
 import Main from './components/Main'
 import AboutPage from './components/AboutPage'
 import BlogPage from './components/BlogPage'
@@ -14,7 +15,7 @@ function App() {
 
   <GlobalStyle/>
   <ThemeProvider theme={lightTheme}>
-  Main
+
     <Switch>
         <Route exact path="/" component={Main}/>
         <Route exact path="/about" component={AboutPage}/>
