@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Container } from 'tsparticles'
+// import { Container } from 'tsparticles'
 
 
 
@@ -15,6 +15,10 @@ const MainContainer = styled.div`
     font-family: 'Karla', sans-serif;
     font-weight: 500;
   }
+`
+
+const Container = styled.div`
+  padding: 2rem;
 `
 
 function Main() {
