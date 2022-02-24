@@ -39,7 +39,17 @@ const BLOG = styled(NavLink)`
   position: absolute;
   top: 50%;
   right: calc(1rem + 2vw);
-  transform: rotate(180deg) translate(-50%, -50%)
+  transform: rotate(90deg) translate(-50%, -50%);
+  text-decoration: none;
+  z-index: 1;
+`
+
+const WORK = styled(NavLink)`
+  color: ${props => props.theme.text};
+  position: absolute;
+  top: 60%;
+  left: 3rem;
+  transform: rotate(-90deg) translate(-50%, -50%);
   text-decoration: none;
   z-index: 1;
 `
@@ -63,6 +73,12 @@ function Main() {
                 Blog
               </h3>
           </BLOG>
+
+          <WORK to="/work">
+              <h3>
+                Work
+              </h3>
+          </WORK>
         </Container>
     </MainContainer>
   )
