@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import LogoComponent from '../subComponents/LogoComponent'
 import PowerButton from '../subComponents/PowerButton'
 // import { Container } from 'tsparticles'
 
@@ -27,6 +28,7 @@ function Main() {
     <MainContainer>
         <Container>
           <PowerButton/>
+          <LogoComponent/>
         </Container>
     </MainContainer>
   )
