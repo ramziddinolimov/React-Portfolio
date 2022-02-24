@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import PowerButton from '../subComponents/PowerButton'
 // import { Container } from 'tsparticles'
 
 
@@ -25,7 +26,7 @@ function Main() {
   return (
     <MainContainer>
         <Container>
-          Main Component/Page
+          <PowerButton/>
         </Container>
     </MainContainer>
   )
