@@ -28,25 +28,25 @@ const SocialIcons = () => {
   return (
     <Icons>
         <div>
-            <NavLink style={{color: 'inherit'}} to='/'>
+            <NavLink style={{color: 'inherit'}} target="_blank" to={{pathname:"https://github.com/ramziddinolimov"}}>
                 <Github width={25} height={25} fill='currentColor' />
             </NavLink>
         </div>
 
         <div>
-            <NavLink style={{color: 'inherit'}} to='/'>
+            <NavLink style={{color: 'inherit'}} target="_blank" to='/'>
                 <Twitter width={25} height={25} fill='currentColor' />
             </NavLink>
         </div>
 
         <div>
-            <NavLink style={{color: 'inherit'}} to='/'>
+            <NavLink style={{color: 'inherit'}} target="_blank" to='/'>
                 <YouTube width={25} height={25} fill='currentColor' />
             </NavLink>
         </div>
 
         <div>
-            <NavLink style={{color: 'inherit'}} to='/'>
+            <NavLink style={{color: 'inherit'}} target="_blank" to='/'>
                 <Facebook width={25} height={25} fill='currentColor' />
             </NavLink>
 
