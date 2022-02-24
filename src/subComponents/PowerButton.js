@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import { PowerBtn } from '../components/AllSvgs'
 
@@ -15,12 +16,25 @@ background-color: #FCF6F4;
   border: 1px solid #000;
   width: 2.5rem;
   height: 2.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(0,255,0,0.4);
+    box-shadow: 0 0 8px 6px rgba(0,255,0,0.2);
+  }
 `
 
 function PowerButton() {
   return (
     <Power>
-       <PowerBtn width={30} height={30} fill='currentColor'/>
+       <NavLink to="/">
+         <PowerBtn width={30} height={30} fill='currentColor'/>
+       </NavLink>
     </Power>
   )
 }
