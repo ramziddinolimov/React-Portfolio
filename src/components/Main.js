@@ -91,7 +91,7 @@ to{
 const Center = styled.button`
 position: absolute;
 top: ${props => props.click ? '85%' :'50%' };
-left: 50%;
+left: ${props => props.click ? '92%' :'50%' };
 transform: translate(-50%, -50%);
 border: none;
 outline: none;
@@ -101,6 +101,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+transition: all 1s ease;
 
 &>:first-child {
   animation: ${rotate} infinite 1.5s linear;
@@ -108,7 +109,20 @@ justify-content: center;
 
 &>:last-child {
   padding-top: 1rem;
+  display: ${props => props.click ? 'none' :'inline-block' };
 }
+`
+
+const DarkDiv = styled.div`
+position: absolute;
+top: 0;
+background-color: #000;
+bottom: 0;
+right: 50%;
+width: ${props => props.click ? '50%' :'0%' };
+height: ${props => props.click ? '100%' :'0%' };
+z-index: 1;
+transition: height 0.5s ease, width 1s ease 0.5s;
 `
 
 const Main = () => {
@@ -117,13 +131,14 @@ const Main = () => {
   const handleClick = () => setClick(!click)
   return (
     <MainContainer>
+       <DarkDiv click={click}/>
         <Container>
           <PowerButton/>
           <LogoComponent/>
           <SocialIcons/>
 
           <Center click={click}>
-              <YinYang onClick={()=> handleClick()} width={200} height={150} fill='currentColor' />
+              <YinYang onClick={()=> handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' />
               <span>click here</span>
           </Center>
 
@@ -139,7 +154,7 @@ const Main = () => {
               </h3>
           </BLOG>
 
-          <WORK to="/work">
+          <WORK to="/work" click={click}>
               <h3>
                 Work
               </h3>
