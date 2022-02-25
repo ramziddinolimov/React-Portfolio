@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import styled, { keyframes } from 'styled-components'
 import LogoComponent from '../subComponents/LogoComponent'
@@ -90,7 +90,7 @@ to{
 
 const Center = styled.button`
 position: absolute;
-top: 50%;
+top: ${props => props.click ? '85%' :'50%' };
 left: 50%;
 transform: translate(-50%, -50%);
 border: none;
@@ -111,7 +111,10 @@ justify-content: center;
 }
 `
 
-function Main() {
+const Main = () => {
+
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click)
   return (
     <MainContainer>
         <Container>
@@ -119,8 +122,8 @@ function Main() {
           <LogoComponent/>
           <SocialIcons/>
 
-          <Center>
-              <YinYang width={150} height={150} fill='currentColor' />
+          <Center click={click}>
+              <YinYang onClick={()=> handleClick()} width={200} height={150} fill='currentColor' />
               <span>click here</span>
           </Center>
 
