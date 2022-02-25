@@ -47,7 +47,7 @@ const BLOG = styled(NavLink)`
 `
 
 const WORK = styled(NavLink)`
-  color: ${props => props.theme.text};
+  color: ${props => props.click ? props.theme.body : props.theme.text};
   position: absolute;
   top: 55%;
   left: 2.6rem;
@@ -67,7 +67,7 @@ justify-content: space-evenly;
 `
 
 const ABOUT = styled(NavLink)`
-  color: ${props => props.theme.text};
+  color: ${props => props.click ? props.theme.body : props.theme.text};
   text-decoration: none;
   z-index: 1;
 `
@@ -135,7 +135,7 @@ const Main = () => {
         <Container>
           <PowerButton/>
           <LogoComponent/>
-          <SocialIcons/>
+          <SocialIcons theme={click ? 'dark' :'light'}/>
 
           <Center click={click}>
               <YinYang onClick={()=> handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' />

@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import { Facebook, Github, Twitter, YouTube } from '../components/AllSvgs'
+import { DarkTheme } from '../components/Themes'
 
 
 const Icons = styled.div`
@@ -21,38 +22,38 @@ z-index: 3;
 const Line = styled.span`
 width: 2px;
 height: 8rem;
-background-color: ${props => props.theme.text};
+background-color: ${props => props.color === 'dark' ? DarkTheme.text  :  DarkTheme.body };
 `
 
-const SocialIcons = () => {
+const SocialIcons = (props) => {
   return (
     <Icons>
         <div>
             <NavLink style={{color: 'inherit'}} target="_blank" to={{pathname:"https://github.com/ramziddinolimov"}}>
-                <Github width={25} height={25} fill='currentColor' />
+                <Github width={25} height={25} fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body} />
             </NavLink>
         </div>
 
         <div>
             <NavLink style={{color: 'inherit'}} target="_blank" to='/'>
-                <Twitter width={25} height={25} fill='currentColor' />
+                <Twitter width={25} height={25} fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body} />
             </NavLink>
         </div>
 
         <div>
             <NavLink style={{color: 'inherit'}} target="_blank" to='/'>
-                <YouTube width={25} height={25} fill='currentColor' />
+                <YouTube width={25} height={25} fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body} />
             </NavLink>
         </div>
 
         <div>
             <NavLink style={{color: 'inherit'}} target="_blank" to='/'>
-                <Facebook width={25} height={25} fill='currentColor' />
+                <Facebook width={25} height={25} fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body} />
             </NavLink>
 
         </div>
 
-        <Line/>
+        <Line color={props.theme}/>
     </Icons>
   )
 }
