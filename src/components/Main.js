@@ -18,6 +18,7 @@ const MainContainer = styled.div`
   h2,h3,h4,h5,h6 {
     font-family: 'Karla', sans-serif;
     font-weight: 500;
+    font-size: 28px;
   }
 `
 
@@ -47,8 +48,8 @@ const BLOG = styled(NavLink)`
 const WORK = styled(NavLink)`
   color: ${props => props.theme.text};
   position: absolute;
-  top: 60%;
-  left: 3rem;
+  top: 55%;
+  left: 2.6rem;
   transform: rotate(-90deg) translate(-50%, -50%);
   text-decoration: none;
   z-index: 1;
@@ -56,7 +57,7 @@ const WORK = styled(NavLink)`
 
 const BottomBar = styled.div`
 position: absolute;
-bottom: 1rem;
+bottom: 2rem;
 left: 0;
 right: 0;
 width: 100%;
