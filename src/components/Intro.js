@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Me from '../assets/Images/profile img.jpg'
+import Me from '../assets/Images/profile.png'
 
 
 const Box = styled.div`
@@ -9,7 +9,7 @@ const Box = styled.div`
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 65vw;
+    width: 60vw;
     height: 55vh;
     display: flex;
     background: linear-gradient(
@@ -35,10 +35,10 @@ const SubBox = styled.div`
 
     .pic {
     position: absolute;
-    bottom: -25%;
+    bottom: 0%;
     left: 50%;
-    transform: translate(-49.9%, 0%);
-    width: 100%;
+    transform: translate(-47.5%, 0%);
+    width: 95%;
     height: auto;
     }
 `
