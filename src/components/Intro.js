@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import Me from '../assets/Images/profile img.jpg'
+
 
 const Box = styled.div`
     position:absolute;
@@ -28,7 +30,20 @@ const Box = styled.div`
 
 const Intro = () => {
   return (
-    <Box>Intro</Box>
+    <Box>
+        <SubBox>
+            <Text>
+                <h1>Hi</h1>
+                <h3>I am Full Stack Developer</h3>
+                <h6>I am Web Programming Node.js</h6>
+            </Text>
+        </SubBox>
+        <SubBox>
+            <div>
+                <img className='pic' src={Me} alt='Profile img'>
+            </div>
+        </SubBox>
+    </Box>
   )
 }
 
