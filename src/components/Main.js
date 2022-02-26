@@ -67,7 +67,7 @@ justify-content: space-evenly;
 `
 
 const ABOUT = styled(NavLink)`
-  color: ${props => props.click ? props.theme.body : props.theme.text};
+  color: ${props => props.click  ? props.theme.body : props.theme.text };
   text-decoration: none;
   z-index: 1;
 `
@@ -134,7 +134,7 @@ const Main = () => {
        <DarkDiv click={click}/>
         <Container>
           <PowerButton/>
-          <LogoComponent/>
+          <LogoComponent theme={click ? 'dark' :'light'}/>
           <SocialIcons theme={click ? 'dark' :'light'}/>
 
           <Center click={click}>
@@ -161,7 +161,7 @@ const Main = () => {
           </WORK>
 
           <BottomBar>
-            <ABOUT to="/about">
+            <ABOUT to="/about" click={click}>
               <h3>
                 About.
               </h3>
