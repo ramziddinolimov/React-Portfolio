@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import {motion} from 'framer-motion'
 import Me from '../assets/Images/profile.png'
 
 
-const Box = styled.div`
+const Box = styled(motion.div)`
     position:absolute;
     left: 50%;
     top: 50%;
@@ -61,7 +61,11 @@ justify-content: space-evenly;
 
 const Intro = () => {
   return (
-    <Box>
+    <Box
+        initial={{height:0}}
+        animate={{height: '55vh'}}
+        transition={{type: 'spring', duration:2, delay:1}}
+    >
         <SubBox>
             <Text>
                 <h1>Hi</h1>
