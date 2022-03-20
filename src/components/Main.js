@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import styled, { keyframes } from 'styled-components'
@@ -144,34 +145,48 @@ const Main = () => {
           </Center>
 
           <Contact target="_blank" to={{pathname:"mailto:ramizmafiya@gmail.com"}}>
-            <h3>
+            <motion.h2
+              whileHover={{scale: 1.1}}
+              whileFocus={{scale: 0.9}}
+            >
               Say hi...
-            </h3>
+            </motion.h2>
           </Contact>
 
           <BLOG to="/blog">
-              <h3>
-                Blog
-              </h3>
+              <motion.h2
+                whileHover={{scale: 1.1}}
+                whileTap={{scale: 0.9}}>
+                Blog.
+              </motion.h2>
           </BLOG>
 
           <WORK to="/work" click={click}>
-              <h3>
+              <motion.h2
+                whileHover={{scale: 1.1}}
+                whileTap={{scale: 0.9}}
+              >
                 Work
-              </h3>
+              </motion.h2>
           </WORK>
 
           <BottomBar>
             <ABOUT to="/about" click={click}>
-              <h3>
+              <motion.h2
+                whileHover={{scale: 1.1}}
+                whileTap={{scale: 0.9}}
+              >
                 About.
-              </h3>
+              </motion.h2>
             </ABOUT>
 
             <SKILLS to="/skills">
-              <h3>
+              <motion.h2
+                whileHover={{scale: 1.1}}
+                whileTap={{scale: 0.9}}
+              >
                 My Skills.
-              </h3>
+              </motion.h2>
             </SKILLS>
           </BottomBar>
         </Container>
