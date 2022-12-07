@@ -5,6 +5,8 @@ import img from "../assets/Images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg"
 import LogoComponent from '../subComponents/LogoComponent'
 import PowerButton from '../subComponents/PowerButton'
 import SocialIcons from '../subComponents/SocialIcons'
+import {Blogs} from '../data/BlogData'
+import BlogComponent from './BlogComponent'
 
 
 const MainContainer = styled.div`
@@ -46,13 +48,11 @@ function BlogPage() {
             <SocialIcons />
             <Center>
               <Grid>
-                <h1>Blog</h1>
-                <h1>Blog</h1>
-                <h1>Blog</h1>
-                <h1>Blog</h1>
-                <h1>Blog</h1>
-                <h1>Blog</h1>
-                <h1>Blog</h1>
+                {
+                  Blogs.map(blog => {
+                   return <BlogComponent key={blog.id} blog={blog} />
+                  })
+                }
               </Grid>
             </Center>
         </Container>
