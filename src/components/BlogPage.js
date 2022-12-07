@@ -14,16 +14,27 @@ const MainContainer = styled.div`
   background-position: center;
   background-attachment: fixed;
   width: 100vw;
-  height: 100vh;
-
 `
 
 const Container = styledComponents.div`
 width: 100%;
-height: auto;
+height: 100vh;
 position: relative;
 padding-bottom: 5rem;
 background-color: ${props => `rgba(${props.theme.bodyRgba}, 0.8)`};
+`
+
+const Center = styledComponents.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10rem;
+`
+
+const Grid = styledComponents.div`
+  display: grid;
+  grid-template-columns: repeat(2, minmax(calc(10rem + 15vw), 1fr));
+  grid-gap: calc(1rem + 2vw); 
 `
 
 function BlogPage() {
@@ -33,6 +44,17 @@ function BlogPage() {
             <LogoComponent />
             <PowerButton />
             <SocialIcons />
+            <Center>
+              <Grid>
+                <h1>Blog</h1>
+                <h1>Blog</h1>
+                <h1>Blog</h1>
+                <h1>Blog</h1>
+                <h1>Blog</h1>
+                <h1>Blog</h1>
+                <h1>Blog</h1>
+              </Grid>
+            </Center>
         </Container>
     </MainContainer>
   )
