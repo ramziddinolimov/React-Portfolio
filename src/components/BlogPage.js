@@ -15,12 +15,11 @@ const MainContainer = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  width: 100vw;
 `
 
 const Container = styledComponents.div`
 width: 100%;
-height: 100vh;
+height: auto;
 position: relative;
 padding-bottom: 5rem;
 background-color: ${props => `rgba(${props.theme.bodyRgba}, 0.8)`};

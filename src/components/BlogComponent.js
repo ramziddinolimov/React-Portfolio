@@ -12,7 +12,7 @@ padding: 1rem;
 const BlogComponent = () => {
   return (
     <Box to="/">
-      Blog item
+      Blog Component
     </Box>
   )
 }
